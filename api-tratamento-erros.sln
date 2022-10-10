@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-tratamento-erros", "api-tratamento-erros\api-tratamento-erros.csproj", "{2C59463F-C2C6-4942-B099-CBD18FB3A971}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C59463F-C2C6-4942-B099-CBD18FB3A971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C59463F-C2C6-4942-B099-CBD18FB3A971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C59463F-C2C6-4942-B099-CBD18FB3A971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C59463F-C2C6-4942-B099-CBD18FB3A971}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {254F46A9-0CF5-4BC4-A2CB-27E22645A8BF}
+	EndGlobalSection
+EndGlobal
