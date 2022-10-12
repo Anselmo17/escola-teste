@@ -9,6 +9,8 @@ namespace api_tratamento_erros
     public interface IAluno
     {
        // metodos 
-        List<Aluno> GetAlunos();
+        Task<Aluno> GetAll();
+
+        Task<Aluno> GetAlunoId(string id);
     }
 }
