@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace api_tratamento_erros.Controllers
 {
-    [ApiController]
     [Route("[controller]")]
+    [ApiController]
     public class AlunosController : Controller
     {
         private readonly DBContext _context;
@@ -22,11 +22,11 @@ namespace api_tratamento_erros.Controllers
         }
 
         [HttpGet]
-        // [Route("/List/Alunos")]
-        public async Task<ActionResult<IEnumerable<Aluno>>> GetAll()
+        public async Task<ActionResult<IEnumerable<Aluno>>> GetAll([FromQuery] int Page = 0, int Size = 5)
         {
-            var alunos = await _context.Aluno.ToListAsync();
-            // throw new Exception("Houve um problema ao obter os alunos.");
+            var alunos = await _context.Aluno.Skip(Page)
+                                              .Take(Size)
+                                              .ToListAsync();
             return alunos;
         }
 
@@ -42,7 +42,6 @@ namespace api_tratamento_erros.Controllers
         }
 
         [HttpPost]
-        [ActionName(nameof(CreateAlunoAsync))]
         public async Task<ActionResult<Aluno>> CreateAlunoAsync(Aluno aluno)
         {
             if (_context.Aluno == null)
@@ -60,8 +59,8 @@ namespace api_tratamento_erros.Controllers
                 throw;
             }
 
-            return CreatedAtAction("GetAluno", new { id = aluno.Id });
-            // return CreatedAtAction(nameof(aluno), new { id = aluno.Id }, aluno);
+            // colocar o nome do metodo no retorno dentro da string
+            return CreatedAtAction("CreateAlunoAsync", new { id = aluno.Id }, aluno);
         }
 
         [HttpDelete("{id}")]

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zFifBDICT+PGwwp9bhBRSpeS9KPwalG2P7g9u731+Yacx5oocJoYESE9D4PAhNOxErLYBaNeVDEAjf/1JhD6tQ==",
+  "dgSpecHash": "xl9L5u5ogQtUd1OLRDvg3kIq3hupBqq5ZGLPqAH7xuDK9xFj/axH2KQ0aRcTHds7OwuHFzRYS18Fvhav2i1ssg==",
   "success": true,
   "projectFilePath": "C:\\Users\\anselmo.dos.santos\\source\\repos\\api-tratamento-erros\\api-tratamento-erros\\api-tratamento-erros.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\anselmo.dos.santos\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\anselmo.dos.santos\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\anselmo.dos.santos\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",
     "C:\\Users\\anselmo.dos.santos\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.10\\microsoft.entityframeworkcore.analyzers.5.0.10.nupkg.sha512",
