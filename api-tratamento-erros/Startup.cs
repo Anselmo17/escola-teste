@@ -1,5 +1,6 @@
 using api_tratamento_erros.ConnectDB;
 using api_tratamento_erros.Errors;
+using api_tratamento_erros.Interface;
 using api_tratamento_erros.Models;
 using api_tratamento_erros.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -37,6 +38,9 @@ namespace api_tratamento_erros
                 connectionMysql,
                 ServerVersion.AutoDetect(connectionMysql)
                 ));
+
+            // services
+            services.AddScoped<IAlunoRepository, AlunoRepository>();
 
             services.AddControllers(
                 options => {

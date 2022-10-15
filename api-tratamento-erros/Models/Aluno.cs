@@ -28,6 +28,7 @@ namespace api_tratamento_erros.Models
 
         [Required(ErrorMessage = "O campo data é obrigatório")]
         public DateTime Created { get; set; }
+
     }
 
 }
