@@ -10,9 +10,14 @@ namespace api_tratamento_erros.Models
     [Table("tb_alunos")]
     public class Aluno
     {
+        public Aluno()
+        {
+            this.Created = DateTime.Now;
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Int32 Id { get; set; }
+        public Int32 Id { get; set;  }
 
         [Required(ErrorMessage ="O campo Nome é obrigatório")]
         public string Nome { get; set; }
@@ -20,6 +25,9 @@ namespace api_tratamento_erros.Models
         [Required(ErrorMessage = "O campo Email é obrigatório")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "O campo precisa ser um email valido.")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "O campo data é obrigatório")]
+        public DateTime Created { get; set; }
     }
 
 }

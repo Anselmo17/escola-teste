@@ -44,6 +44,8 @@ namespace api_tratamento_erros.Controllers
         [HttpPost]
         public async Task<ActionResult<Aluno>> CreateAlunoAsync(Aluno aluno)
         {
+            var date = DateTime.Now;
+            aluno.Created = date;
             if (_context.Aluno == null)
             {
                 return Problem("Entity set DbContext.Aluno is null.");
