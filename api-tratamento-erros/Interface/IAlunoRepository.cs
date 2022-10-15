@@ -4,13 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace api_tratamento_erros
+namespace api_tratamento_erros.Interface
 {
-    public interface IAluno
+    public interface IAlunoRepository
     {
-       // metodos 
-        Task<Aluno> GetAll();
-
-        Task<Aluno> GetAlunoId(string id);
+        Task<List<Aluno>> GetAllAsync(int Page, int Size);
     }
 }

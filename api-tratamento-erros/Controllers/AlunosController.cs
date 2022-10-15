@@ -1,4 +1,5 @@
 ﻿using api_tratamento_erros.ConnectDB;
+using api_tratamento_erros.Interface;
 using api_tratamento_erros.Models;
 using api_tratamento_erros.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -16,17 +17,17 @@ namespace api_tratamento_erros.Controllers
     public class AlunosController : Controller
     {
         private readonly DBContext _context;
-        public AlunosController(DBContext context)
+        private IAlunoRepository alunoRepository;
+        public AlunosController(DBContext context, IAlunoRepository alunoRepository)
         {
             _context = context;
+            this.alunoRepository = alunoRepository;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Aluno>>> GetAll([FromQuery] int Page = 0, int Size = 5)
+        public async Task <List<Aluno>> GetAllAsync([FromQuery] int Page = 0, int Size = 5)
         {
-            var alunos = await _context.Aluno.Skip(Page)
-                                              .Take(Size)
-                                              .ToListAsync();
+            var alunos = await alunoRepository.GetAllAsync(Page, Size);
             return alunos;
         }
 
