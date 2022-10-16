@@ -51,33 +51,20 @@ namespace api_tratamento_erros.Controllers
             {
                 return Problem("Entity set DbContext.Aluno is null.");
             }
-            _context.Aluno.Add(aluno);
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
+            var alunoCreated = await alunoRepository.CreateAlunoAsync(aluno);
+         
             // colocar o nome do metodo no retorno dentro da string
-            return CreatedAtAction("CreateAlunoAsync", new { id = aluno.Id }, aluno);
+            return CreatedAtAction("CreateAlunoAsync", new { id = alunoCreated.Id }, alunoCreated);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAluno(int id)
+        public async Task<IActionResult<Aluno>> DeleteAluno(int id)
         {
-            var aluno = await _context.Aluno.FindAsync(id);
+            var aluno = await alunoRepository.DeleteAluno(id);
             if (aluno == null)
             {
                 return NotFound();
             }
-
-            _context.Aluno.Remove(aluno);
-            await _context.SaveChangesAsync();
-
             return NoContent();
         }
 
