@@ -23,12 +23,17 @@ namespace api_tratamento_erros.Repository
             _context = context;
         }
 
-        async Task<List<Aluno>> IAlunoRepository.GetAllAsync(int Page, int Size)
+        async Task<DataAluno> IAlunoRepository.GetAllAsync(int Page, int Size)
         {
             var alunos = await _context.Aluno.Skip(Page)
                                                .Take(Size)
                                                .ToListAsync();
-            return alunos;
+            var total = _context.Aluno.Count();
+            // create object
+            DataAluno data = new DataAluno();
+            data.alunos = alunos;
+            data.totalItens = total;
+            return data;
         }
 
         async Task<Aluno> IAlunoRepository.GetAlunoIdAsync(int Id)
@@ -43,7 +48,22 @@ namespace api_tratamento_erros.Repository
 
             try
             {
+                var result = await _context.SaveChangesAsync();
+                return aluno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        async Task<Aluno> IAlunoRepository.PutAlunoAsync(int id, Aluno aluno)
+        {
+            try
+            {
+                _context.Entry(aluno).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
+                return aluno;
             }
             catch (Exception)
             {
@@ -61,7 +81,6 @@ namespace api_tratamento_erros.Repository
 
             _context.Aluno.Remove(aluno);
             await _context.SaveChangesAsync();
-
             return aluno;
         }
     }
