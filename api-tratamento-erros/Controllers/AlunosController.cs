@@ -57,8 +57,39 @@ namespace api_tratamento_erros.Controllers
             return CreatedAtAction("CreateAlunoAsync", new { id = alunoCreated.Id }, alunoCreated);
         }
 
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Aluno>> PutAlunoAsync(int id, Aluno aluno)
+        {
+            if (id != aluno.Id)
+            {
+                return BadRequest();
+            }
+           
+            try
+            {
+                var alunoCreated = await alunoRepository.PutAlunoAsync(id, aluno);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!AlunoExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return CreatedAtAction("PutAlunoAsync", new { id = id }, aluno);
+        }
+
+        private bool AlunoExists(int id)
+        {
+            return _context.Aluno.Any(e => e.Id == id);
+        }
+
         [HttpDelete("{id}")]
-        public async Task<IActionResult<Aluno>> DeleteAluno(int id)
+        public async Task<IActionResult> DeleteAluno(int id)
         {
             var aluno = await alunoRepository.DeleteAluno(id);
             if (aluno == null)

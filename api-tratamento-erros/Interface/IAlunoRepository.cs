@@ -16,5 +16,7 @@ namespace api_tratamento_erros.Interface
         Task<Aluno> CreateAlunoAsync(Aluno aluno);
 
         Task<Aluno> DeleteAluno(int id);
+
+        Task<Aluno> PutAlunoAsync(int id, Aluno aluno);
     }
 }

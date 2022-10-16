@@ -43,7 +43,22 @@ namespace api_tratamento_erros.Repository
 
             try
             {
+                var result = await _context.SaveChangesAsync();
+                return aluno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        async Task<Aluno> IAlunoRepository.PutAlunoAsync(int id, Aluno aluno)
+        {
+            try
+            {
+                _context.Entry(aluno).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
+                return aluno;
             }
             catch (Exception)
             {
