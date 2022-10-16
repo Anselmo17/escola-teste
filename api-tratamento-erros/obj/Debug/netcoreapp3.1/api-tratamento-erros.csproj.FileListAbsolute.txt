@@ -1,9 +1,3 @@
-C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.AssemblyInfoInputs.cache
-C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.AssemblyInfo.cs
-C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.csproj.CoreCompileInputs.cache
-C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\bin\Debug\netcoreapp3.1\api-tratamento-erros.exe
@@ -37,6 +31,12 @@ C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-err
 C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.AssemblyInfoInputs.cache
+C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.AssemblyInfo.cs
+C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.csproj.CoreCompileInputs.cache
+C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\staticwebassets\api-tratamento-erros.StaticWebAssets.Manifest.cache
 C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.RazorTargetAssemblyInfo.cache
 C:\Users\anselmo.dos.santos\source\repos\api-tratamento-erros\api-tratamento-erros\obj\Debug\netcoreapp3.1\api-tratamento-erros.csproj.CopyComplete
