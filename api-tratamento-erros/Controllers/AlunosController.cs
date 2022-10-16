@@ -25,7 +25,7 @@ namespace api_tratamento_erros.Controllers
         }
 
         [HttpGet]
-        public async Task <List<Aluno>> GetAllAsync([FromQuery] int Page = 0, int Size = 5)
+        public async Task <DataAluno> GetAllAsync([FromQuery] int Page = 0, int Size = 5)
         {
             var alunos = await alunoRepository.GetAllAsync(Page, Size);
             return alunos;

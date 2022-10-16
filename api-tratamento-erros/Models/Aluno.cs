@@ -31,4 +31,10 @@ namespace api_tratamento_erros.Models
 
     }
 
+    public class DataAluno
+    {
+        public List<Aluno> alunos { get; set; }
+        public int totalItens { get; set; }
+    }
+
 }
